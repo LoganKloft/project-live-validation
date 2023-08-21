@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Live Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- error message display -->
+    <div id="error-message">
+        default error message
+    </div>
+
+    <main>
+        <!-- all validation done in JavaScript -->
+        <form action="" id="form" novalidate>
+            <div>
+                <label for="email">Email*</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="country">Country*</label>
+                <input type="text" name="country" id="country" required>
+            </div>
+            <div>
+                <label for="zip">Zip Code*</label>
+                <input type="text" name="zip" id="zip" pattern="^\d{5}(-\d{4})?$" required>
+            </div>
+            <div>
+                <label for="password">Password*</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="confirm-password">Confirm Password*</label>
+                <input type="password" name="confirmPassword" id="confirm-password" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
